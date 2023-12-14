@@ -19,13 +19,19 @@ class Car{
     }
 
     #move(){ //control direction and speed
+        if (this.controls.boost){
+            this.maxSpeed =4
+            this.acceleration =0.3
+        } else {
+            this.maxSpeed =3
+            this.acceleration =0.2
+        }
         if(this.controls.forward){
             this.speed+=this.acceleration;
         }
         if(this.controls.reverse){
             this.speed-=this.acceleration;
         }
-
         if(this.speed>this.maxSpeed){
             this.speed=this.maxSpeed;
         }
