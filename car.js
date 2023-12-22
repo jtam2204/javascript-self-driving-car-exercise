@@ -19,7 +19,7 @@ class Car{
     }
 
     #move(){ //control direction and speed
-        if (this.controls.boost){
+        if (this.controls.boost){ //add boost
             this.maxSpeed =4
             this.acceleration =0.3
         } else {
@@ -52,10 +52,10 @@ class Car{
         if(this.speed!=0){
             const flip=this.speed>0?1:-1;
             if(this.controls.left){
-                this.angle+=0.03*flip;
+                this.angle+=0.02*flip; //left angle
             }
             if(this.controls.right){
-                this.angle-=0.03*flip;
+                this.angle-=0.02*flip; //right angle
             }
         }
 
